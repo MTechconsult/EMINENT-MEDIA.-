@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eminent Media</title>
+  <style>
+    /* ---------- Base ---------- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #222;
+    }
+
+    /* ---------- Top scrolling banner ---------- */
+    .scrolling-text {
+      width: 100%;
+      overflow: hidden;
+      background-color: #ff6600; /* orange */
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 6px 0;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .scrolling-text span {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 4rem; /* small gap before start */
+      animation: scroll-left 18s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* ---------- Logo + scrolling row ---------- */
+    .logo-scroll-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 16px;
+      background: #fff; /* keep page white background */
+      box-sizing: border-box;
+    }
+
+    .logo-scroll-row .scrolling-text {
+      margin: 0;
+      flex: 1;
+      padding-left: 12px;
+    }
+
+    /* ---------- Logo circle ---------- */
+    .logo-circle {
+      width: 160px;
+      height: 160px;
+      min-width: 80px; /* when on small screens */
+      border-radius: 50%;
+      background-color: #fff;
+      border: 5px solid #ff6600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 18px rgba(255,102,0,0.35);
+      flex-shrink: 0;
+    }
+
+    .logo-circle img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background: linear-gradient(90deg, #ff6600, #ff944d);
+      padding: 25px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .main-heading {
+      font-size: 48px;
+      font-weight: 900;
+      color: #ff6600;
+      -webkit-text-stroke: 2px #fff;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.55);
+      margin: 0 0 10px 0;
+    }
+
+    /* ---------- Sections and Buttons ---------- */
+    h2 {
+      color: #ff6600;
+      text-transform: uppercase;
+      margin: 0 0 12px 0;
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 25px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #ff6600;
+      box-shadow: 0 4px 10px rgba(255,102,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      color: #ff6600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a:hover { color: #cc5200; text-decoration: underline; }
+
+    /* CTA label above buttons */
+    .cta-label {
+      color: #ff6600;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .cta-label a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+
+    .cta-label a:hover {
+      color: #cc5200;
+      text-decoration: underline;
+    }
+
+    button {
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button:hover { background: #cc5200; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 18px;
+      background-color: #ff6600;
+      color: #fff;
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 700px) {
+      .main-heading { font-size: 34px; -webkit-text-stroke: 1.6px #fff; }
+      .logo-circle { width: 110px; height: 110px; }
+      .logo-circle img { width: 90px; height: 90px; }
+      .scrolling-text span { font-size: 16px; padding-left: 2rem; }
+      .cta-label { font-size: 15px; }
+    }
+  </style>
+
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- TOP COMBINED SCROLL -->
+  <div class="scrolling-text" aria-hidden="true">
+    <span>Welcome to Eminent Media · Your media for online opportunities · Where Preparation Meets Opportunities</span>
+  </div>
+
+  <!-- LOGO (circle) + SECOND SCROLLING TEXT — side by side, BEFORE header -->
+  <div class="logo-scroll-row">
+    <div class="logo-circle">
+      <!-- replace EminentLogo.jpg with your actual logo -->
+      <img src="EminentLogo.jpg" alt="Eminent Media Logo" />
+    </div>
+
+    <div class="scrolling-text" aria-hidden="true">
+      <span>Connecting You with Reliable Opportunities | Scam-Free | Career Growth</span>
+    </div>
+  </div>
+
+  <!-- STROKED HEADER -->
+  <header>
+    <h1 class="main-heading">Eminent Media</h1>
+    <p>Your go-to online platform for genuine job opportunities, CV reviews, government loans &amp; grants, and career updates.</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <div class="section">
+      <h2>About Eminent Media</h2>
+      <p>Eminent Media is your trusted online hub for uncovering opportunities — from job openings and interview tips to CV revamps, government grant and loan programs, and other career-advancing applications. We streamline the process, safeguard you from scams, and equip you with the right tools to grow personally and professionally.</p>
+    </div>
+
+    <div class="section">
+      <h2>Need Assistance with Your CV?</h2>
+      <p>Whether it’s crafting, reviewing, or revamping, we’ve got you covered. Let us help you present your best self to potential employers.</p>
+
+      <!-- Arrow label ABOVE the button -->
+      <div class="cta-label">
+        <a href="https://wa.link/3qpss2" onclick="openLink('https://wa.link/3qpss2'); return false;">⬇️Click Here</a>
+      </div>
+      <button onclick="openLink('https://wa.link/3qpss2')" aria-label="Open Eminent Media Services on WhatsApp">
+        Eminent Media Services
+      </button>
+    </div>
+
+    <div class="section">
+      <h2>Join Our WhatsApp Channel</h2>
+      <p>Stay updated with genuine opportunities, job postings, and growth resources.</p>
+
+      <!-- Arrow label ABOVE the button -->
+      <div class="cta-label">
+        <a href="https://whatsapp.com/channel/0029VaZ2jdeKGGGPSjJcO023" onclick="openLink('https://whatsapp.com/channel/0029VaZ2jdeKGGGPSjJcO023'); return false;">⬇️Click Here</a>
+      </div>
+      <button onclick="openLink('https://whatsapp.com/channel/0029VaZ2jdeKGGGPSjJcO023')" aria-label="Join Eminent Media Official WhatsApp Channel">
+        Join Official WhatsApp Channel
+      </button>
+    </div>
+
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>We are committed to protecting job seekers from fraudulent agents and unnecessary fees. Eminent Media is all about simplifying access to resources, empowering individuals, and fostering community development.</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2024 Eminent Media. All rights reserved.
+  </footer>
+
+</body>
+</html>
